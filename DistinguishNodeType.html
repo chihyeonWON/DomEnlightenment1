@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distinguish Node Type</title>
+</head>
+<body>
+    <a href="#">Hi</a>
+
+    <script>
+        //<a>는 ELEMENT_NODE인가?
+        console.log(document.querySelecotr("a").nodeType === 1); /* <a>는 Element 노드이므로 true가 기록됨 */
+        
+        //또는 숫자 값 1을 가지고 있는 속성인 Node.ELEMENT_NODE를 사용
+        console.log(document.querySelector("a").nodeType === Node.ELEMENT_NODE);
+        //<a>가 ELEMENT 노드이므로 true가 기록됨
+    </script>
+</body>
+</html>

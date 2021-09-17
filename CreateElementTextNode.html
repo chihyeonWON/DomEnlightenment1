@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element & Text Node</title>
+</head>
+<body>
+    <script>
+        var elementNode = document.createElement("div");
+        console.log(elementNode, elementNode.nodeType); 
+        /* <div> 1을 출력하며 1은 element 노드를 가리킨다. */
+
+        var textNode = document.createTextNode("Hi");
+        console.log(textNode, textNode.nodeType); 
+        /* Text {} 3 을 출력하며, 3은 text 노드를 가리킨다 */
+    </script>
+</body>
+</html>

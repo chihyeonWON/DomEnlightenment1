@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insertAdjacentHTML Method</title>
+</head>
+<body>
+    <i id="elm">how</i>
+
+    <script>
+
+        var elm = document.getElementById("elm");
+
+        elm.insertAdjacentHTML("beforebegin", "<span>Hey-</span>");
+        elm.insertAdjacentHTML("afterbegin","<span>dude-</span>");
+        elm.insertAdjacentHTML("beforeend","<span>-are</span>");
+        elm.insertAdjacentHTML("afterend","<span>-you?</span>");
+
+        console.log(document.body.innerHTML);
+        /* 다음이 출력됨 
+        <span>Hey-</span><i id="elm"><span>dude-</span>how<span>-are</span></i><span>-you?</span> */
+    </script>
+</body>
+</html>

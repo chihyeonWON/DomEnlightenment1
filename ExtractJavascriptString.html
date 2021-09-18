@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract to javascript String in DOM</title>
+</head>
+<body>
+    <div id="A">
+        <i>Hi</i>
+    </div>
+    <div id="B">
+        Dude<strong>!</strong>
+    </div>
+
+    <script>
+
+        console.log(document.getElementById("A").innerHTML); //<i>Hi</i>가 출력됨
+        console.log(document.getElementById("A").outerHTML); //<div id="A"><i>Hi</i></div>가 출력됨
+
+        //자식 요소 노드 내에 있는 경우에 (예 : <strong>!</strong>에는 모든 텍스트가 반환됨)
+        console.log(document.getElementById("B").textContent); //dude!가 출력됨
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use isArray function to detect NodeList is not real javascript Array</title>
+</head>
+<body>
+    
+    <a href="#"></a>
+
+    <script>
+
+        console.log(Array.isArray(document.links)); /* HTMLCollection이지 Array가 아니므로 false가 반환된다 */
+        console.log(Array.isArray(document.querySelectorAll("a"))); /* NodeList이지 Array가 아니므로 false가 반환된다 */
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to use CloneNode function</title>
+</head>
+<body>
+    
+    <ul>
+        <li>Hi</li>
+        <li>there</li>
+    </ul>
+
+    <script>
+        
+        var cloneUL = document.querySelector("ul").cloneNode();
+
+        console.log(cloneUL.constructor); //HTMLUListElement()가 출력됨.
+
+        console.log(cloneUL.innerHTML); //ul만이 복제되었으므로 빈 문자열이 출력됨.
+        
+    </script>
+</body>
+</html>

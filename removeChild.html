@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to use removeChild function</title>
+</head>
+<body>
+    
+    <div id="A">Hi</div>
+    <div id="B">Dude</div>
+
+    <script>
+
+        //element 노드 삭제
+        var divA = document.getElementById("A");
+        divA.parentNode.removeChild(divA);
+
+        //텍스트 노드 삭제
+        var divB = document.getElementById("B").firstChild;
+        divB.parentNode.removeChild(divB);
+        
+        //새롭게 갱신된 DOM을 출력( 빈 div#B만 남아있어야함)
+        console.log(document.body.innerHTML);
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Methods to convert to real javscript Array</title>
+</head>
+<body>
+    
+    <a href="#"></a>
+
+    <script>
+
+        console.log(Array.isArray(Array.prototype.slice.call(document.links))); //true를 반환
+        console.log(Array.isArray(Array.prototype.slice.call(document.querySelectorAll("a")))); //true를 반환
+        
+        // call,apply.slice 메서드를 사용하는데 아무것도 잘라내지않는 이유는 slice가 배을 반환해서 리스트를 javascript array로 변환하는데 사용되기 때문
+    </script>
+</body>
+</html>

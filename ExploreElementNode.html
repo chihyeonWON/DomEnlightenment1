@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Element Node by DOM's explore function</title>
+</head>
+<body>
+    
+    <ul><!-- comment-->
+        <li id="A"></li>
+        <li id="B"></li>
+        <!-- comment-->
+    </ul>
+
+    <script>
+
+        //ul을 선택해서 저장
+        var ul = document.querySelector("ul");
+
+        //ul의 첫 번째 자식은?
+        console.log(ul.firstElementChild.nodeName); //li가 출력됨
+
+        //ul의 마지막 자식은?
+        console.log(ul.lastElementChild.nodeName); //li가 출력됨
+
+        //첫 번째 li의 nextSibling은?
+        console.log(ul.querySelector("#A").nextElementSibling.nodeName); //li가 출력됨
+
+        //마지막 li의 previousSibling은?
+        console.log(ul.querySelector("#B").previousElementSibling.nodeName); //li가 출력됨
+
+        //ul의 자식 노드 중 element만을 가져오려면?
+        console.log(ul.children); //HTMLColletion이며, 모든 자식 노드는 text 노드를 가짐. 
+
+        //첫 번째 li의 부모 element는?
+        console.log(ul.firstElementChild.parentElement); //ul가 출력됨
+
+
+    </script>
+</body>
+</html>

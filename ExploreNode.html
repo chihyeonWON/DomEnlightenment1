@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Node inside DOM</title>
+</head>
+<body>
+    <ul><!-- comment -->
+        <li id="A"></li>
+        <li id="B"></li>
+        <!-- comment-->
+    </ul>
+
+    <script>
+
+        //ul을 선택해서 저장
+        var ul = document.querySelector("ul");
+
+        //ul의 parentNode는?
+        console.log(ul.parentNode.nodeName); //body가 출력됨
+
+        //ul의 첫 번째 자식은?
+        console.log(ul.firstChild.nodeName); //comment가 출력됨
+
+        //ul의 마지막 자식은?
+        console.log(ul.lastChild.nodeName); /* 줄바꿈이 있기 때문에 comment가 아닌 text가 출력됨 */
+
+        //첫 번째 li의 nextSibling은?
+        console.log(ul.querySelector("#A").nextSibling.nodeName); //text가 출력됨
+
+        //마지막 li의 nextSibling은?
+        console.log(ul.querySelector("#B").nextSibling.nodeName); //text가 출력됨
+        
+    </script>
+</body>
+</html>
